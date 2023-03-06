@@ -45,9 +45,27 @@ header {
   }
 }
 </style> -->
-<script setup>
-import {ref} from "vue";
-const count = ref(0);
+<script>
+  // import {ref} from "vue";
+  // const count = ref(0);
+  // console.log(count);
+  export default ({
+    data(){
+      return{
+        count:0
+      }
+    },
+    methods:{
+      addCount(){
+        // console.log("hiiiiiii");
+        this.count = this.count +1
+      }, 
+      subtructCount(){
+        this.count = this.count - 1
+      }
+    }
+
+  })
 </script>
 <template>
   <div>
@@ -55,7 +73,12 @@ const count = ref(0);
       counter is :
     </h4>
     <h1>{{count}}</h1>
-    <button @click="count--">-</button>
-    <button @click="count++">+</button>
+    <button @click="subtructCount()">-</button>
+    <button @click="addCount()">+</button>
   </div>
 </template>
+<style >
+div{
+  background-color: rgb(214, 186, 240);
+}
+</style>
