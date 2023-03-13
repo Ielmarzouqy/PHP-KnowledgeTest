@@ -1,5 +1,6 @@
 
 <template>
+ 
   <div class="info-page hide " id="info-page">
     <div class="content">
         <div>
@@ -16,6 +17,7 @@
    
 
 </div>
+
 </template>
 
 <style scoped>
@@ -27,12 +29,12 @@
   margin: 0;
   box-sizing: border-box;
 }
-template {
+body {
   background-image: linear-gradient(to right, #430D7D 18%, #964185 100%);
   -webkit-animation: transitionIn-Y-bottom 0.5s;
           animation: transitionIn-Y-bottom 0.5s;
 }
-#info-page {
+body {
   height: 100vh;
   background: linear-gradient(to right, #430D7D 18%, #471a3e 100%);
 }
@@ -53,30 +55,28 @@ template {
   border-color: #E8A69A;
   box-sizing: border-box;
   color: #f8fafa;
-  margin-left: 58px;
+  margin-left: 40px;
   font-size: 19px;
-  padding: 33px;
+  
 }
 .info-page .content .info-title {
-  top: 300px;
-  left: 100px;
   color: #C01EA0;
   justify-content: center;
   align-items: center;
-  margin-left: 100px;
+  margin-left: 30px;
 }
 .info-page .img-info {
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 500px;
   margin-top: 40px;
-  margin-left: 50px;
+  margin-left: 450px;
 }
 .start-btn, .res-btn {
   border: none;
   padding: 2px 15px;
   width: 130px;
   height: 60px;
-  margin-left: 80px;
+  margin-left: 50px;
   font-size: 20px;
   cursor: pointer;
   color: aliceblue;
