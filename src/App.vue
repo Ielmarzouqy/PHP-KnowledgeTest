@@ -1,5 +1,10 @@
 
+<script setup>
+
+import stepper from "./components/stepper.vue"
+</script>
 <template>
+  <stepper />
  
   <div class="info-page hide " id="info-page">
     <div class="content">

@@ -20,7 +20,6 @@
 </template>
 
 <style scoped>
-
 .progress-container {
   display: flex;
   margin: 0 auto 30px;
@@ -29,6 +28,14 @@
   position: relative;
   width: 350px;
   max-width: 100%;
+}
+
+.container {
+  text-align: center;
+  position: absolute;
+  top: 1em;
+  left: 50%;
+  transform: translate(-50%, 18%);
 }
 .progress-container::before {
   content: "";
@@ -40,14 +47,14 @@
 }
 .progress {
   width: 0;
-  background-color: #c3119f;
-  height: 5px;
-  top: 50%;
+  /*background-color: #c3119f; */
+  height: 5000px;
+  top: 800%;
   position: absolute;
   transform: translateY(-50%);
   z-index: -1;
   transition: 0.4s ease-in-out;
-}
+}*
 
 .circle {
   background: #fff;
