@@ -5,8 +5,8 @@ import questions from "./components/questions.vue"
 import r from "./components/result.vue"
 </script>
 <template>
-   <stepper />
-   <!-- <questions /> -->
+   <!-- <stepper /> -->
+  
 
   <div class="info-page" v-if="showPage && !showComponent" id="info-page">
     <div class="content">
@@ -82,7 +82,7 @@ body {
 .info-page .content p {
   border-color: #E8A69A;
   box-sizing: border-box;
-  color: #f8fafa;
+  color: #0f5252;
   margin-left: 40px;
   font-size: 19px;
   

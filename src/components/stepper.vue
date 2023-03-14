@@ -19,7 +19,7 @@
 </div>
 </template>
 
-<style scoped>
+<style >
 .progress-container {
   display: flex;
   margin: 0 auto 30px;
