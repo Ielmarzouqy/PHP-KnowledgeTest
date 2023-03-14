@@ -6,7 +6,18 @@ const questions = ref(q)
 const quizCompleted = ref(false)
 const currentQuestion = ref(0)
 let count =   0
+const score = computed(()=>{
 
+ let value = 0
+
+ questions.value.forEach(q=>{
+   if(q.selected == q.answer){
+     value++
+   }
+ })
+ return value
+
+})
 
 const getCurrentQuestion = computed(() => {
  let question = questions.value[currentQuestion.value]
