@@ -124,13 +124,13 @@ h1{
   font-size:1.25rem ;
 }
 .quiz-info .score{
-  color: black;
+  color: rgb(233, 160, 160);
   font-size: 1.25rem;
 }
 .option{
   display: block;
   padding: 1rem;
-  background-color: rgb(67, 15, 89);
+  background-color: rgb(177, 144, 190);
   color: aliceblue;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;

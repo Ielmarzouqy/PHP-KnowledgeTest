@@ -5,7 +5,7 @@ import questions from "./components/questions.vue"
 import r from "./components/result.vue"
 </script>
 <template>
-   <!-- <stepper /> -->
+   <stepper />
   
 
   <div class="info-page" v-if="showPage && !showComponent" id="info-page">
