@@ -4,32 +4,42 @@ import stepper from "./components/stepper.vue"
 import questions from "./components/questions.vue"
 </script>
 <template>
-   <stepper />
+   <!-- <stepper /> -->
 
-  <div class="info-page" v-if="showPage" id="info-page">
+  <div class="info-page" v-if="showPage && !showComponent" id="info-page">
     <div class="content">
         <div>
             <h1 id="info-title" class="info-title">Quiz PHP!</h1>
             <p id="content" >The test contains 10 questions and there is no time limit.<br>
                 The test is not official, <br> 
                 it's just a nice way to see how much you know, or don't know, about PHP. </p>
-            <button id="start" @click="showPage = !showPage" class="start-btn ">Start Quiz </button>
+            <button id="start" @click="showComponent= !showComponent" class="start-btn ">Start Quiz </button>
         </div>
         <div id="image">
             <img class="img-info" src="./assets/PHP6.png" alt="image">
         </div>
     </div>
   </div>
-  <questions />
+  <stepper v-if="showComponent"></stepper>
+
+  
 </template>
 
 <script>
 export default {
+  components: {
+      stepper
+      },
   data() {
+    
     return {
-      showPage: true
+      showPage: true,
+      showComponent: false
     };
+   
+
   }
+ 
 };
 </script>
 
