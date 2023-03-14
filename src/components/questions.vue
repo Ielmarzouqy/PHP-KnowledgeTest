@@ -19,7 +19,10 @@ const getCurrentQuestion = computed(() => {
 //   question.index = randomIndex
 //   return question
 // })
-
+const setAnswer = e => {
+ questions.value[currentQuestion.value].selected = e.target.value
+ e.target.value = null
+}
 const nextQuestion = () =>{
  count++
  if(currentQuestion.value< questions.value.length -1){
