@@ -45,12 +45,13 @@ const nextQuestion = () =>{
 </script> 
 
 <template>
-<main class="apnp">
+<main class="app">
  <h1>PHP Quiz</h1>
  <section class="quiz" v-if="!quizCompleted">
-   <dev class="quiz-info">
+   <div class="quiz-info">
      <span class="question"> {{ getCurrentQuestion.question }} </span>
      <span class="score"> {{ count }} / {{ questions.length }} </span>
+     </div>
      <div class="options">
        <label v-for="(option, index) in getCurrentQuestion.options" :key="index"
              :class="`option ${
@@ -84,7 +85,7 @@ const nextQuestion = () =>{
      
 
      </button>
-   </dev>
+   
  </section>
  <section v-else>
    <h1>you have finished quiz</h1>
@@ -95,13 +96,14 @@ const nextQuestion = () =>{
 </main>
 </template>
 
-<style scoped>
+<style >
 
 .app{
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  margin-top: 80%;
 }
 h1{
   font-size: 2rem;
@@ -114,26 +116,49 @@ h1{
   max-width:640px ;
   border-radius: 0.5rem;
 }
-.quiz-info{
+ .quiz-info{
   display: flex;
   justify-content:space-between ;
   margin-bottom: 1rem;
 }
+
 .quiz-info .question{
-  color:rgb(239, 239, 69);
-  font-size:1.25rem ;
+  color:rgb(254, 254, 252);
+  font-size:1.5rem ;
 }
+
 .quiz-info .score{
-  color: rgb(233, 160, 160);
+  color: rgb(212, 11, 169);
   font-size: 1.25rem;
 }
+
 .option{
   display: block;
   padding: 1rem;
-  background-color: rgb(177, 144, 190);
+  background-color: rgb(78, 50, 90);
   color: aliceblue;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+ 
+.option:hover{
+  background-color: rgb(153, 50, 197);
+}
+.option .correct{
+  background-color: #2cce7d;
+}
+.optiion .wrong{
+  background-color: #ff5a5f;
+  
+}
+.option:last-of-type{
+  margin-bottom: 0;
+}
+.option.disabled{
+  opacity: 0.5;
+}
+.option input{
+  display: none;
 }
 </style>
