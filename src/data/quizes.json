@@ -1,109 +1,36 @@
 [
+  
     {
-       "questions":[
-        {
-            "id":1,
-            "text":"first ques",
-            "options":[
-                {
-                    "id":1,
-                    "label":"A",
-                    "text":"aaaaaaaaaa",
-                    "isCorret":true
-                },
-                {
-                    "id":2,
-                    "label":"B",
-                    "text":"bbbbbbbbbbb",
-                    "isCorret":false
-                },
-                {
-                    "id":3,
-                    "label":"C",
-                    "text":"ccccccccc",
-                    "isCorret":false
-                },
-                {
-                    "id":4,
-                    "label":"D",
-                    "text":"dddddddddddd",
-                    "isCorret":false
-                }
-                
-                
-
-            ]
-
-        },
-        {
-            "id":2,
-            "text":"second ques",
-            "options":[
-                {
-                    "id":1,
-                    "label":"A",
-                    "text":"aaaaaaaaaa",
-                    "isCorret":false
-                },
-                {
-                    "id":2,
-                    "label":"B",
-                    "text":"bbbbbbbbbbb",
-                    "isCorret":true
-                },
-                {
-                    "id":3,
-                    "label":"C",
-                    "text":"ccccccccc",
-                    "isCorret":false
-                },
-                {
-                    "id":4,
-                    "label":"D",
-                    "text":"dddddddddddd",
-                    "isCorret":false
-                }
-                
-                
-
-            ]
-
-        }, 
-        {
-            "id":3,
-            "text":"third ques",
-            "options":[
-                {
-                    "id":1,
-                    "label":"A",
-                    "text":"aaaaaaaaaa",
-                    "isCorret":false
-                },
-                {
-                    "id":2,
-                    "label":"B",
-                    "text":"bbbbbbbbbbb",
-                    "isCorret":false
-                },
-                {
-                    "id":3,
-                    "label":"C",
-                    "text":"ccccccccc",
-                    "isCorret":true
-                },
-                {
-                    "id":4,
-                    "label":"D",
-                    "text":"dddddddddddd",
-                    "isCorret":false
-                }
-                
-                
-
-            ]
-
-        }
-       ]
-        
-    }
-]
+    "question":"what is PHP",
+    "answer":1,
+    "options":[
+      "fphgreger", 
+      "backend language",
+      "fkdugrerng",
+      "eriggreg"
+    ],
+    "selected":null
+  },
+  {
+    "question":"what is laravel",
+    "answer":1,
+    "options":[
+      "fphgreger", 
+      "freamwork of php",
+      "fkdugrerng",
+      "eriggreg"
+    ],
+    "selected":null
+  },
+  {
+    "question":"what is vue" ,
+    "answer":2,
+    "options":[
+      "fphgreger", 
+      "skfjegr",
+      "freamwork of javascript",
+      "eriggreg"
+    ],
+    "selected":null
+  }
+  ]

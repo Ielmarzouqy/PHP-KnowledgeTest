@@ -2,9 +2,11 @@
 <script setup>
 import stepper from "./components/stepper.vue"
 import questions from "./components/questions.vue"
+import r from "./components/result.vue"
 </script>
 <template>
-   <!-- <stepper /> -->
+   <stepper />
+   <!-- <questions /> -->
 
   <div class="info-page" v-if="showPage && !showComponent" id="info-page">
     <div class="content">
@@ -20,7 +22,10 @@ import questions from "./components/questions.vue"
         </div>
     </div>
   </div>
-  <stepper v-if="showComponent"></stepper>
+  <questions v-if="showComponent"></questions>
+  <!-- <stepper v-if="showComponent"></stepper> -->
+  <!-- <r v-if="showComponent"></r> ===> it work -->
+
 
   
 </template>
@@ -28,7 +33,7 @@ import questions from "./components/questions.vue"
 <script>
 export default {
   components: {
-      stepper
+    questions
       },
   data() {
     
