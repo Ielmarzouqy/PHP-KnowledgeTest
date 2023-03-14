@@ -20,7 +20,14 @@ const getCurrentQuestion = computed(() => {
 //   return question
 // })
 
-
+const nextQuestion = () =>{
+ count++
+ if(currentQuestion.value< questions.value.length -1){
+   currentQuestion.value++
+ }else{
+   quizCompleted.value = true
+ }
+}
 </script> 
 
 <template>
@@ -115,5 +122,4 @@ h1{
   border-radius: 0.5rem;
   cursor: pointer;
 }
-
 </style>
