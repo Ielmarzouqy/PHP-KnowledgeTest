@@ -64,7 +64,13 @@ const getCurrentQuestion = computed(() => {
 
      </button>
    </dev>
- 
+ </section>
+ <section v-else>
+   <h1>you have finished quiz</h1>
+   <span>
+     your score is   {{ score }}/{{ questions.length }}
+   </span>
+ </section>
 </main>
 </template>
 
@@ -109,4 +115,5 @@ h1{
   border-radius: 0.5rem;
   cursor: pointer;
 }
+
 </style>
