@@ -10,20 +10,30 @@ export default {
   <section class="result">
     <h1>you have finished quiz</h1>
     <span>
-      your score is   {{score.score }}/{{ score.length }}
+      your score is  <span class="score"> {{score.score }}/{{ score.length }}</span>
     </span>
   </section>
 </template>
 
 <style>
+
 .result{
- /* margin-top: 40px;*/
-  background-color: rgb(187, 127, 243);
+  position: absolute;
+  width: 100%;
+  top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
   margin-top: 100rem;
+  
+}
+h1{
+  color: rgb(92, 26, 153);
 }
 
+.score{
+  font-size:x-large;
+  padding: 10px;
+}
 </style>

@@ -25,12 +25,6 @@ const getCurrentQuestion = computed(() => {
  question.index = currentQuestion.value
  return question
 })
-// const getCurrentQuestion = computed(() => {
-//   const randomIndex = Math.floor(Math.random() * questions.value.length)
-//   let question = questions.value[randomIndex]
-//   question.index = randomIndex
-//   return question
-// })
 const setAnswer = e => {
  questions.value[currentQuestion.value].selected = e.target.value
  e.target.value = null
@@ -79,8 +73,8 @@ const showresult = ()=>{
                <span> {{ option }} </span>
        </label>
      </div>
-     <button v-if="getCurrentQuestion.index != questions.length - 1" @click="nextQuestion"  :disabled="!getCurrentQuestion.selected">Next</button>
-     <button v-else @click="showresult">Get result</button>
+     <button v-if="getCurrentQuestion.index != questions.length - 1" @click="nextQuestion"  :disabled="!getCurrentQuestion.selected" class="next-btn">Next</button>
+     <button v-else @click="showresult" class="res-btn">Get result</button>
  </section>
  
 </main>
@@ -94,6 +88,9 @@ const showresult = ()=>{
   align-items: center;
   min-height: 100vh;
   margin-top: 80%;
+  position: absolute;
+  width: 100%;
+  top: 100px;
 }
 h1{
   font-size: 2rem;
@@ -150,5 +147,28 @@ h1{
 }
 .option input{
   display: none;
+}
+.res-btn{
+ border: none;
+ color: aliceblue;
+  background: #3fc41a;
+  width: 80px;
+  height: 35px;
+  border-radius: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.next-btn:disabled{
+  opacity: 0.5;
+}
+.next-btn{
+  border: none;
+  color: white;
+  background: #C3119F;
+  width: 80px;
+  height: 35px;
+  border-radius: 5px;
+  margin-top: 5px;
+  cursor: pointer;
 }
 </style>

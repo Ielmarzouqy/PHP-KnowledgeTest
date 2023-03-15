@@ -40,9 +40,9 @@ export default {
 };
 </script>
 <template>
-   <stepper :curentStep="curentStep" />
 <component :is="currentComponent" @show-result="changestepTo3" @showQuiz="showQuiz" :score="score"></component>
 
+<stepper :curentStep="curentStep"/>
   
 </template>
 
@@ -61,6 +61,7 @@ body {
   background-image: linear-gradient(to right, #430D7D 18%, #964185 100%);
   -webkit-animation: transitionIn-Y-bottom 0.5s;
           animation: transitionIn-Y-bottom 0.5s;
+  
 }
 body {
   height: 100vh;
@@ -87,4 +88,5 @@ body {
   align-items: center;
   margin-left: 550px;
 }
+
 </style>

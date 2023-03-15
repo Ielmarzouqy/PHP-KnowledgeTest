@@ -38,6 +38,7 @@ export default {
   top: 1em;
   left: 50%;
   transform: translate(-50%, 18%);
+  margin-bottom: 100px;
 }
 .progress-container::before {
   content: "";

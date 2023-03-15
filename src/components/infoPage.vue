@@ -34,6 +34,9 @@ body {
   background: linear-gradient(to right, #430D7D 18%, #471a3e 100%);
 }
 .info-page {
+  position: absolute;
+  width: 100%;
+  top: 150px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -47,7 +50,7 @@ body {
   top: 50% ;
 }
 .info-page .content p {
-  border-color: #E8A69A;
+  
   box-sizing: border-box;
   color: #0f5252;
   margin-left: 40px;
