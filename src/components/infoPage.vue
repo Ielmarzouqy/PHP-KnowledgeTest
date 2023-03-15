@@ -44,7 +44,7 @@ body {
 }
 .info-page .content {
   display: flex;
-  top: 100px;
+  top: 50% ;
 }
 .info-page .content p {
   border-color: #E8A69A;

@@ -7,7 +7,7 @@ export default {
 };
 </script>
 <template>
-  <section >
+  <section class="result">
     <h1>you have finished quiz</h1>
     <span>
       your score is   {{score.score }}/{{ score.length }}
@@ -16,5 +16,14 @@ export default {
 </template>
 
 <style>
+.result{
+ /* margin-top: 40px;*/
+  background-color: rgb(187, 127, 243);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: 100rem;
+}
 
 </style>
