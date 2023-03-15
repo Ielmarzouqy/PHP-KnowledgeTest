@@ -1,20 +1,22 @@
-<script setup>
-// defineProps({
-//   msg: {
-//     type: String,
-//     required: true
-//   }
-// })
+<script >
+export default {
+  props: {
+    curentStep:String
+  },
+  data(){
+    return{
+      steps :3
+    }
+  }
+};
 </script>
 
 <template>
   <div class="container" id="stepper">
      
     <div class="progress-container"> 
-        <div class="progress" id="progress"></div>
-        <div class="circle active " id="circle">1</div>
-        <div class="circle   " id="circle2">2</div>
-        <div class="circle " id="circle3">3</div>
+        <!-- <div class="progress" id="progress"></div> -->
+        <div v-for="step in steps" class="circle" :class="{active:  curentStep>=step }" :key="step" id="circle">{{step}}</div>
     </div>
 </div>
 </template>
@@ -40,16 +42,16 @@
 .progress-container::before {
   content: "";
   width: 100%;
-  background-color: white;
+  background-color: rgb(211, 28, 165);
   height: 5px;
   position: absolute;
   z-index: -1;
 }
 .progress {
-  width: 0;
-  /*background-color: #c3119f; */
-  height: 5000px;
-  top: 800%;
+  width: 100px;
+  background-color: #cb35ad; 
+  height: 5px;
+  top: 5%;
   position: absolute;
   transform: translateY(-50%);
   z-index: -1;

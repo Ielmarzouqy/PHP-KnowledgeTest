@@ -1,6 +1,7 @@
 <script setup>
 import q from "../data/quizes.json"
 import {ref, computed} from 'vue'
+const emit = defineEmits(['show-result'])
 const questions = ref(q)
 
 const quizCompleted = ref(false)
@@ -42,6 +43,11 @@ const nextQuestion = () =>{
    quizCompleted.value = true
  }
 }
+const showresult = ()=>{
+  quizCompleted.value=true
+  emit('show-result',{score:score.value,length:questions.value.length})
+
+}
 </script> 
 
 <template>
@@ -73,26 +79,10 @@ const nextQuestion = () =>{
                <span> {{ option }} </span>
        </label>
      </div>
-     <button
-     @click="nextQuestion"
-     :disabled="!getCurrentQuestion.selected">
-     {{ getCurrentQuestion.index == questions.length - 1
-         ? 'Finish'
-         :getCurrentQuestion.selected == null
-         ?'Select an option'
-         :'next question'
-     }}
-     
-
-     </button>
-   
+     <button v-if="getCurrentQuestion.index != questions.length - 1" @click="nextQuestion"  :disabled="!getCurrentQuestion.selected">Next</button>
+     <button v-else @click="showresult">Get result</button>
  </section>
- <section v-else>
-   <h1>you have finished quiz</h1>
-   <span>
-     your score is   {{ score }}/{{ questions.length }}
-   </span>
- </section>
+ 
 </main>
 </template>
 

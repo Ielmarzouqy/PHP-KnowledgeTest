@@ -1,52 +1,52 @@
-
-<script setup>
+<script>
 import stepper from "./components/stepper.vue"
 import questions from "./components/questions.vue"
-import r from "./components/result.vue"
-</script>
-<template>
-   <stepper />
-  
+import result from "./components/result.vue"
+import infoPage from './components/infoPage.vue'
 
-  <div class="info-page" v-if="showPage && !showComponent" id="info-page">
-    <div class="content">
-        <div>
-            <h1 id="info-title" class="info-title">Quiz PHP!</h1>
-            <p id="content" >The test contains 10 questions and there is no time limit.<br>
-                The test is not official, <br> 
-                it's just a nice way to see how much you know, or don't know, about PHP. </p>
-            <button id="start" @click="showComponent= !showComponent" class="start-btn ">Start Quiz </button>
-        </div>
-        <div id="image">
-            <img class="img-info" src="./assets/PHP6.png" alt="image">
-        </div>
-    </div>
-  </div>
-  <questions v-if="showComponent"></questions>
-  <!-- <stepper v-if="showComponent"></stepper> -->
-  <!-- <r v-if="showComponent"></r> ===> it work -->
-
-
-  
-</template>
-
-<script>
 export default {
   components: {
-    questions
+    questions,
+    stepper,
+    result,
+    infoPage,
       },
   data() {
     
     return {
       showPage: true,
-      showComponent: false
+      currentComponent: infoPage,
+      curentStep:1,
+      score:null
     };
    
 
+  },
+  methods:{
+    showQuiz(){
+    this.currentComponent = questions
+    this.curentStep = 2
+    },
+    changestepTo3(score){
+      // alert(score)
+      this.currentComponent = result
+      this.score = score
+      this.curentStep = 3
+     
+    }
   }
+
  
 };
 </script>
+<template>
+   <stepper :curentStep="curentStep" />
+<component :is="currentComponent" @show-result="changestepTo3" @showQuiz="showQuiz" :score="score"></component>
+
+  
+</template>
+
+
 
 <style scoped>
 
@@ -65,39 +65,6 @@ body {
 body {
   height: 100vh;
   background: linear-gradient(to right, #430D7D 18%, #471a3e 100%);
-}
-.info-page {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  min-height: 600px;
-  -webkit-animation: transitionIn-Y-bottom 0.5s;
-          animation: transitionIn-Y-bottom 0.5s;
-}
-.info-page .content {
-  display: flex;
-  top: 100px;
-}
-.info-page .content p {
-  border-color: #E8A69A;
-  box-sizing: border-box;
-  color: #0f5252;
-  margin-left: 40px;
-  font-size: 19px;
-  
-}
-.info-page .content .info-title {
-  color: #C01EA0;
-  justify-content: center;
-  align-items: center;
-  margin-left: 30px;
-}
-.info-page .img-info {
-  width: 500px;
-  height: 500px;
-  margin-top: 40px;
-  margin-left: 450px;
 }
 .start-btn, .res-btn {
   border: none;
